@@ -12,5 +12,6 @@
  *
  *= require_tree .
  *= require semantic_ui/semantic_ui
+ *= require importfontawesome.css.less
  *= require_self
  */
