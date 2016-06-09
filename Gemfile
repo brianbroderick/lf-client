@@ -39,3 +39,10 @@ gem 'autoprefixer-rails'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'therubyracer', platforms: :ruby
+
+group :development, :test do
+  gem "pry"
+  gem "dotenv-rails"
+  gem "rubocop", { :require => false }
+  gem "mocha"
+end
