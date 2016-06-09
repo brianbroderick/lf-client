@@ -1,3 +1,8 @@
 /*******************************
          Site Overrides
 *******************************/
+
+.ui.form div.field.error {
+  width: 100%;
+  vertical-align: top;
+}

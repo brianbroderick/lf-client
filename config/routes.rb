@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
+
+  root 'hello_world#index'
   get 'hello_world', to: 'hello_world#index'
 
-  resources :lens
+  get '/:seo_url.:format', to: 'lenses#show', as: :show_lens, defaults: { format: 'html' }
+  resources :lenses
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

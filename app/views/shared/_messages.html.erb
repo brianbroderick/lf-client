@@ -1,0 +1,23 @@
+<% if notice -%>
+<div class="ui positive message ">
+  <i class="close icon"></i>
+  <div class="header">Notice</div>
+  <p><%= notice %></p>
+</div>
+<% end -%>
+
+<% if alert -%>
+<div class="ui negative message ">
+  <i class="close icon"></i>
+  <div class="header">Warning</div>
+  <p><%= alert %></p>
+</div>
+<% end -%>
+
+<% if alert or notice -%>
+<script>
+  $('.message .close').on('click', function() {
+    $(this).closest('.message').fadeOut();
+  });
+</script>
+<% end -%>

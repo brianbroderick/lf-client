@@ -1,3 +1,68 @@
 /*******************************
          Site Overrides
 *******************************/
+
+body {
+  background-color: rgba(93, 37, 37, 0.05);
+}
+#footer {
+  margin-top: 1em;
+}
+#content {
+  margin-top: 1em;
+}
+.fa_right_margin {
+  margin-right: 5px;
+}
+.no_right_padding {
+  padding-right: 0px ;
+}
+.pad_top_0 {
+  padding-top: 0px;
+}
+.pad_top_10 {
+  padding-top: 10px;
+}
+.margin_top_10 {
+  margin-top: 10px;
+}
+.pad_top_40 {
+   padding-top: 40px;
+}
+.pad_top_50 {
+  padding-top: 50px;
+}
+.content_pusher {
+  margin-top: 60px;
+}
+.link_row {
+    padding-bottom: 0px;
+}
+.black_bg {
+  background-color: #000 !important;
+  color: #ffffff !important;
+}
+/* browsers require these rules separate */
+.placeholder_light ::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 1) !important;
+}
+.placeholder_light ::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 1) !important;
+}
+.placeholder_light :-ms-input-placeholder {
+  color: rgba(255, 255, 255, 1) !important;
+}
+.placeholder_light ::-moz-placeholder {
+  color: rgba(255, 255, 255, 1) !important;
+}
+/*
+.main.container {
+  margin-top: 0px;
+}
+.main.menu {
+  margin-top: -13.5em;
+}
+*/
+.banner_menu {
+  margin-top: 0px  !important;
+}

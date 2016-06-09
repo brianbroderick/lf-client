@@ -1,0 +1,27 @@
+  <% if @title -%>
+    <%#= link_to("<i class=\"fa fa-camera-retro fa_right_margin\"></i> #{@lens.title}".html_safe, show_lens_path(@lens.seo_url), class: 'header item') %>
+    <%= link_to(@title, show_lens_path(@lens.seo_url), class: 'header item') -%>
+  <% else -%>
+    <div class="header item">New Lens</div>
+  <% end -%>
+
+  <% unless @lens.id.blank? -%>
+    <%= link_to "Details", show_lens_path(@lens.seo_url), class: "item" -%>
+    <%= link_to "Articles", edit_lens_path(@lens), class: "item" -%>
+    <%= link_to "Gallery", edit_lens_path(@lens), class: "item" -%>
+    <%= link_to "Questions", edit_lens_path(@lens), class: "item" -%>
+    <%= link_to "Discussions", edit_lens_path(@lens), class: "item" -%>
+  <% end -%>
+  <div class="right menu">
+    <% if user_signed_in? -%>
+      <% unless @lens.id.blank? -%>
+        <% if @mode == 'edit' -%>
+          <%= link_to "Show", show_lens_path(@lens.seo_url), class: "item" -%>
+        <% else -%>
+          <%= link_to "Edit", edit_lens_path(@lens), class: "item" -%>
+        <% end -%>
+      <% end -%>
+    <% else -%>
+      <%= link_to "Sign In to Edit", new_user_session_path, class: "item" -%>
+    <% end -%>
+  </div>

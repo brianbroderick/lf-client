@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>LfClient</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
+  <title>Lensformation</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<%= render partial: 'shared/header' %>
 
+<section id="content">
+  <div class="ui container">
+    <%= render partial: 'shared/messages' %>
+    <%= render partial: 'shared/edit_mode_nag' %>
+    <div class="<%= @mode == 'edit' ? "ui green top attached inverted menu" : "ui top attached menu" %>">
+      <% if @lens %>
+        <%= render partial: 'shared/lens_header' %>
+      <% end %>
+    </div>
+    <div class="ui bottom attached segment">
+      <%= yield %>
+    </div>
+  </div>
+</section>
+
+<%= render partial: 'shared/footer' %>
+
+<script>
+  $('.ui.dropdown').dropdown();
+  $("input[name='utf8']").hide();
+</script>
 </body>
 </html>

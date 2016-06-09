@@ -1,0 +1,28 @@
+<%= form_tag(root_path, method: "get") do %>
+<div class="ui top blue inverted menu banner_menu">
+    <%= link_to '<i class="fa fa-camera-retro fa_right_margin"></i> Lensformation'.html_safe, root_path, class: "header item" %>
+    <div class="right menu">
+      <% if user_signed_in? %>
+        <%= link_to "New Lens", new_lens_path, class: "item" %>
+        <%= link_to "Sign Out", '', class: "item", method: "delete" %>
+      <% else %>
+        <%= link_to "Sign In", '', class: "item" %>
+        <%= link_to "Sign Up", '', class: "item" %>
+      <% end %>
+      <div class="item">
+        <div class="ui action placeholder_light input">
+          <%= text_field_tag :q, params[:q], class: "inverted black_bg", placeholder: "Search" %>
+          <button class="ui black button" type="submit"><i class="search icon"></i></button>
+        </div>
+      </div>
+    </div>
+</div>
+<% end %>
+
+
+
+
+
+
+
+

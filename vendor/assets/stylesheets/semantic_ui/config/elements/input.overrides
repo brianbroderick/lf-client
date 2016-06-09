@@ -1,3 +1,8 @@
 /*******************************
          Site Overrides
 *******************************/
+
+.ui[class*="left icon"].input div > input {
+  padding-left: @iconMargin !important;
+  padding-right: @horizontalPadding !important;
+}

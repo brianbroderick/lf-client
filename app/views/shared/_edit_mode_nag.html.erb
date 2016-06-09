@@ -1,0 +1,18 @@
+<% if @mode == 'edit' -%>
+<% unless cookies[:edit_mode] -%>
+  <div class="ui positive message edit_mode">
+    <i class="close icon"></i>
+    <div class="header">Edit Mode</div>
+    <p>The green menu indicates that you are in edit mode.</p>
+  </div>
+<% end -%>
+
+<script>
+  $('.edit_mode')
+      .nag({
+        key      : 'edit_mode',
+        value    : true
+      })
+  ;
+</script>
+<% end -%>

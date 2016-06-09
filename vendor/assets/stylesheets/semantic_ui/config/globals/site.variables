@@ -1,3 +1,7 @@
 /*******************************
      User Global Variables
 *******************************/
+
+@primaryColor   : @blue;
+@blue           : #215B83;
+@green          : #218330;
