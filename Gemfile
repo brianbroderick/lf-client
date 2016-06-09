@@ -25,6 +25,8 @@ gem "react_on_rails", "~> 5"
 gem 'less-rails-semantic_ui'
 gem 'autoprefixer-rails'
 
+gem 'puma'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

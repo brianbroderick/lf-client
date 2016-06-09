@@ -114,6 +114,8 @@ GEM
       method_source (~> 0.8.1)
       slop (~> 3.4)
       spoon (~> 0.0)
+    puma (3.4.0)
+    puma (3.4.0-java)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -211,6 +213,7 @@ DEPENDENCIES
   mocha
   pg
   pry
+  puma
   rails (= 4.2.6)
   react_on_rails (~> 5)
   rubocop
