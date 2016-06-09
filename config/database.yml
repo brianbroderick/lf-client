@@ -6,6 +6,8 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  username: <%= ENV['DATABASE_USER'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
 
 development:
   <<: *default
@@ -64,5 +66,4 @@ test:
 production:
   <<: *default
   database: lf-client_production
-  username: lf-client
-  password: <%= ENV['LF-CLIENT_DATABASE_PASSWORD'] %>
+
